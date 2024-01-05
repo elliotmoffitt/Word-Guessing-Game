@@ -24,11 +24,12 @@ let currentState = () => {
                 currentState();
             }
             //if user puts in uppercase letter, toLowerCase()
-            if (answer.match(/([A-Z])/)) {
+            if (answer.match(/([A-Z])/) && answer.length === 1) {
                 guess += answer.toLowerCase();
                 console.log(guess)
                 currentState()
-            } else {
+            }
+            if (answer.length === 1) {
                 guess += answer;
                 console.log(guess)
                 currentState()
