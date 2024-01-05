@@ -1,0 +1,68 @@
+    Word Guessing Game Project - README
+✓    Introduction
+    This project is about creating a console-based word guessing game similar to Hangman or Wordle using JavaScript and Node.js, with a focus on recursion and modular coding practices.
+
+✓    Project Structure
+    Initialize Node.js Project:
+
+    Create a new directory for your project.
+✓    Run npm init to start a new Node.js project.
+    Create an index.js file which will be your main file.
+    Setup Readline for Input/Output:
+
+    In index.js, require the readline module.
+✓    Create an interface for input/output using readline.createInterface.
+    Test this setup by writing a simple program to echo user input.
+    Design Word Repository:
+
+    Create a module (e.g., wordRepository.js) for managing words.
+✓    Include a list of words from which the game will randomly choose.
+    Export a function to get a random word from this list.
+    Initialize Game State:
+
+In your main file, set up variables to store the current game state (e.g., selected word, number of attempts, guessed letters).
+Consider edge cases like repeated letters in words.
+Create Display Function:
+
+Write a function to display the current state of the word (e.g.,  p p  e for "apple" with 'p' and 'e' guessed).
+Ensure it handles words with repeated letters correctly.
+Implement User Guess Handling:
+
+Write a function to handle user guesses.
+Validate input (only single letters, no previously guessed letters).
+Update the game state based on the guess (correct or incorrect).
+Incorporate Recursive Game Loop:
+
+Implement the main game loop as a recursive function.
+Include a base case for ending the recursion (word fully guessed or attempts exhausted).
+Remember to progress towards the base case in each iteration.
+Build End Game Logic:
+
+Develop logic to determine and display the game's outcome (win/loss).
+Include an option to restart the game, which should recursively call the main game loop function.
+Refactor and Modularize Code:
+Break down large functions into smaller, reusable functions.
+Ensure each module or function has a single responsibility.
+Comment your code for clarity and maintainability.
+Testing and Debugging:
+
+Test the game in various scenarios (e.g., correct guesses, wrong guesses, edge cases like all letters same).
+Debug any issues and refine the game experience.
+Additional Notes
+Pay attention to how your code handles edge cases, such as invalid inputs or repeated guesses.
+Aim for readability and maintainability in your code. This includes using meaningful variable names, writing comments, and avoiding overly complex functions.
+Encourage experimentation. After completing the basic requirements, try adding new features or improving the user interface.
+const wordList = [
+    "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi", "lemon",
+    "mango", "nectarine", "orange", "papaya", "quince", "raspberry", "strawberry", "tangerine", "ugli", "vanilla",
+    "watermelon", "xigua", "yam", "zucchini", "asparagus", "broccoli", "carrot", "daikon", "endive", "fennel",
+    "garlic", "horseradish", "iceberg", "jalapeno", "kale", "lettuce", "mushroom", "nutmeg", "okra", "parsnip",
+    "quinoa", "radish", "spinach", "tomato", "utopia", "vermicelli", "wasabi", "xanthan", "yucca", "ziti",
+    "acorn", "biscuit", "cucumber", "dumpling", "escargot", "falafel", "gnocchi", "hummus", "ink", "jambalaya",
+    "ketchup", "lasagna", "macaroon", "nougat", "oregano", "paella", "quiche", "ravioli", "sushi", "taco",
+    "udon", "veal", "waffle", "xanthan", "yogurt", "zephyr", "amber", "bronze", "copper", "diamond", "emerald",
+    "feldspar", "gold", "hematite", "ivory", "jade", "kryptonite", "lapis", "marble", "nephrite", "onyx",
+    "pearl", "quartz", "ruby", "sapphire", "topaz", "uranium", "vanadium", "wolfram", "xenotime", "yttrium", "zinc"
+];
+
+module.exports = wordList;

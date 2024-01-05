@@ -1,5 +1,5 @@
 const readline = require('readline');
-const wordList = require('./wordRepository')
+const randomWord = require('./wordRepository');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -8,4 +8,6 @@ const rl = readline.createInterface({
 
 rl.close()
 
-console.log(wordList)
+
+
+console.log(randomWord)

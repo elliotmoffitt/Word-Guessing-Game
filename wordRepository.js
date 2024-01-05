@@ -11,4 +11,9 @@ const wordList = [
     "pearl", "quartz", "ruby", "sapphire", "topaz", "uranium", "vanadium", "wolfram", "xenotime", "yttrium", "zinc"
 ];
 
-module.exports = wordList;
+let randomWord = (arr) => {
+    let random = arr[Math.floor(Math.random() * arr.length)]
+    return random;
+}
+
+module.exports = randomWord(wordList);
