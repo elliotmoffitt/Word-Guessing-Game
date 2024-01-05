@@ -68,26 +68,3 @@ const wordList = [
 ];
 
 module.exports = wordList;
-
-
-// let currentState = () => {
-//     rl.question('Guess a letter: ', answer => {
-//         //if user puts in more than one letter or a number, call again
-//         if (answer.length > 1 || answer.match(/[(0-9)]/)) {
-//             currentState();
-//         }
-//         //if user puts in uppercase letter, toLowerCase()
-//         if (answer.match(/([A-Z])/)) {
-//             guess += answer.toLowerCase();
-//             currentState()
-//             console.log(guess)
-//         } else {
-//             guess += answer;
-//             currentState()
-//             console.log(guess)
-//         }
-
-//     })
-// }
-
-// rl.close()

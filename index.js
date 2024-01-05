@@ -16,16 +16,11 @@ for (let i = 0; i < word.length; i++) {
     guess += '_';
 }
 
-let compareLetters = () => {
-    rl.question('Guess a letter: ', answer => {
-        console.log(answer)
-    })
-}
 let currentState = () => {
     if (guess !== word) {
         rl.question('Guess a letter: ', answer => {
             //if user puts in more than one letter or a number, call again
-            if (answer.length > 1 || answer.match(/[(0-9)]/)) {
+            if (answer.length > 1 || answer.match(/([0-9])/)) {
                 currentState();
             }
             //if user puts in uppercase letter, toLowerCase()
@@ -38,10 +33,8 @@ let currentState = () => {
                 console.log(guess)
                 currentState()
             }
-
         })
     }
-
 }
 
 // rl.close()
