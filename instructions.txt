@@ -20,11 +20,13 @@
     Export a function to get a random word from this list.
     Initialize Game State:
 
-In your main file, set up variables to store the current game state (e.g., selected word, number of attempts, guessed letters).
-Consider edge cases like repeated letters in words.
-Create Display Function:
+    In your main file, set up variables to store the current
+✓    game state (e.g., selected word, number of attempts, guessed letters).
+    Consider edge cases like repeated letters in words.
+    Create Display Function:
 
-Write a function to display the current state of the word (e.g.,  p p  e for "apple" with 'p' and 'e' guessed).
+Write a function to display the current state of the word
+(e.g.,  p p  e for "apple" with 'p' and 'e' guessed).
 Ensure it handles words with repeated letters correctly.
 Implement User Guess Handling:
 
