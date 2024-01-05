@@ -9,30 +9,22 @@ const rl = readline.createInterface({
 
 let attempts = 0;
 let word = randomWord;
-let guessed = '';
+let guess = '';
+// let word = 'testing';
 
-let currentState = () => {
+for (let i = 0; i < word.length; i++) {
+    guess += '_';
+}
+
+let compareLetters = () => {
     rl.question('Guess a letter: ', answer => {
-        //if user puts in more than one letter or a number, call again
-        if (answer.length > 1 || answer.match(/[(0-9)]/)) {
-            currentState();
-        }
-        //if user puts in uppercase letter, toLowerCase()
-        if (answer.match(/([A-Z])/)) {
-            guessed += answer.toLowerCase();
-            currentState()
-            console.log(guessed)
-        } else {
-            guessed += answer;
-            currentState()
-            console.log(guessed)
-        }
-
+        console.log(answer)
     })
 }
 
-// rl.close()
+//if letter user puts in is included in word, .indexOf() where that letter is, replace '_' with letter
 
 
 
-console.log(currentState())
+
+console.log(compareLetters())
