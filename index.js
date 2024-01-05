@@ -16,7 +16,7 @@ for (let i = 0; i < word.length; i++) {
     guess += '_';
 }
 
-let currentState = () => {
+const currentState = () => {
     if (guess !== word) {
         rl.question('Guess a letter: ', answer => {
             //if user puts in more than one letter or a number, call again
@@ -24,12 +24,23 @@ let currentState = () => {
                 currentState();
             }
             if (answer.length === 1) {
-                guess += answer.toLowerCase();
+                // guess += answer.toLowerCase();
+                guessingWord(answer.toLowerCase())
                 console.log(guess)
                 currentState()
             }
         })
     }
+}
+
+const guessingWord = (el) => {
+    let spl = guess.split('')
+    let index = word.indexOf(el);
+    if (word.includes(el)) {
+        spl[index] = el;
+    }
+    guess = spl.join('')
+    return guess
 }
 
 // rl.close()
